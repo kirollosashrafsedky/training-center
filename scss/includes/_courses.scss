@@ -1,0 +1,105 @@
+#courses,
+#blog {
+    a.course-card {
+        display: block;
+        box-shadow: $defaultShadow;
+        transition: $defaultTransition;
+        color: $textBlack;
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+        }
+        .course-instructor {
+            color: #a19b9b;
+            img {
+                width: 70px;
+            }
+        }
+
+        .course-tag {
+            position: relative;
+            text-align: left;
+            span {
+                position: relative;
+                display: inline-block;
+                top: -15px;
+                left: 0;
+                padding: 5px 17px;
+                font-weight: 500;
+                color: #fff;
+                background-color: $secondaryColor;
+            }
+        }
+        .footer {
+            border-top: 1px solid #cccccc;
+        }
+    }
+    .custom-form {
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+
+        .form-control {
+            width: 100%;
+            &::-webkit-input-placeholder {
+                /* Edge */
+                color: $textBlack;
+                font-weight: 500;
+            }
+
+            &::-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: $textBlack;
+                font-weight: 500;
+            }
+
+            &::placeholder {
+                color: $textBlack;
+                font-weight: 500;
+            }
+        }
+        button {
+            background-color: $secondaryColor;
+            img {
+                width: 18px;
+            }
+        }
+    }
+    #popular-courses {
+        background-color: #e8ecfa;
+
+        .media > img {
+            width: 60px;
+        }
+    }
+    .content {
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+        .course-instructor {
+            img {
+                width: 50px;
+                vertical-align: middle;
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                margin-bottom: 10px;
+                &::before {
+                    content: "";
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url("../images/courses/tick-icon.svg");
+                    background-position: center;
+                    background-size: contain;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}

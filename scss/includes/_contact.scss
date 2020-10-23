@@ -1,0 +1,19 @@
+#contact {
+    background-color: #fff;
+    .custom-form {
+        width: 100%;
+        max-width: 700px;
+        margin: auto;
+        margin-top: -75px;
+        .form-control {
+            border: 1px solid rgba(112, 112, 112, 0.4);
+        }
+    }
+}
+@media (max-width: 992px) {
+    #contact {
+        .custom-form {
+            margin-top: -15px;
+        }
+    }
+}

@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: $textBlack;
+    background-color: #fbfbff;
+}
+
+#app {
+    overflow-x: hidden;
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.bgcolor-primary {
+    background-color: $primaryColor;
+    color: #fff;
+}
+
+.color-primary {
+    color: $primaryColor !important;
+}
+
+.color-gray {
+    color: $textGray !important;
+}
+
+.color-black {
+    color: $textBlack !important;
+}
+
+a.bgcolor-primary {
+    background-color: $primaryColor;
+    border: 2px solid $primaryColor;
+    color: #fff;
+    transition: $defaultTransition;
+    &:hover {
+        background-color: transparent;
+        color: $primaryColor;
+    }
+}
+.btn-primary {
+    background-color: $primaryColor;
+    color: #fff;
+    border: 2px solid $primaryColor;
+    font-weight: 500;
+    border-radius: 0;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-color: #fff;
+        color: $primaryColor;
+        border-color: $primaryColor;
+    }
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active:focus {
+        background-color: #fff;
+        color: $primaryColor;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+.btn-secondary {
+    background-color: $secondaryColor;
+    color: #fff;
+    border: 2px solid $secondaryColor;
+    font-weight: 500;
+    border-radius: 0;
+    &:hover,
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-color: #fff;
+        color: $secondaryColor;
+        border-color: $secondaryColor;
+    }
+    &:focus,
+    &:not(:disabled):not(.disabled):active:focus,
+    &:not(:disabled):not(.disabled).active:focus {
+        background-color: #fff;
+        color: $secondaryColor;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    &.load-more {
+        .icon {
+            background-image: url("../images/courses/refresh-icon.svg");
+            width: 15px;
+            height: 15px;
+            background-position: center;
+            background-size: 100%;
+            display: inline-block;
+            vertical-align: middle;
+            transition: $defaultTransition;
+        }
+        &:hover,
+        &:focus {
+            .icon {
+                background-image: url("../images/courses/refresh-icon-secondary.svg");
+            }
+        }
+    }
+}
+
+.logo {
+    &:hover {
+        text-decoration: none;
+    }
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $textBlack;
+    }
+}
+
+.sec-heading {
+    font-size: 2.5rem;
+}
+@media (max-width: 576px) {
+    .sec-heading {
+        font-size: 2rem;
+    }
+}
+
+.overlay {
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+#full-overlay {
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.4s linear;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 991px) {
+    #full-overlay.show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.form-control::-webkit-input-placeholder {
+    /* Edge */
+    color: $textGray;
+}
+
+.form-control::-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $textGray;
+}
+
+.form-control::placeholder {
+    color: $textGray;
+}
+
+.custom-form {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: $defaultShadow;
+    h4 {
+        background-color: $secondaryColor;
+    }
+    .form-control {
+        background-color: #e8ecfa;
+        border-radius: 0;
+        border-width: 0;
+        resize: none;
+    }
+}

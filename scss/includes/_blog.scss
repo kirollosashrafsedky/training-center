@@ -1,0 +1,46 @@
+#blog {
+    a.blog-card {
+        display: block;
+        box-shadow: $defaultShadow;
+        transition: $defaultTransition;
+        color: $textBlack;
+        &:hover {
+            transform: scale(1.05);
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+        }
+        .blog-author {
+            color: #a19b9b;
+            img {
+                width: 50px;
+            }
+        }
+    }
+    .content {
+        article {
+            font-size: 0.9rem;
+        }
+        #comments {
+            .media {
+                font-size: 0.8rem;
+                img {
+                    width: 50px;
+                }
+                .media-body {
+                    border: 1px solid rgba(112, 112, 112, 0.502);
+                }
+                h5 {
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+            }
+        }
+        #leave-comment {
+            form {
+                .form-control {
+                    border: 1px solid rgba(112, 112, 112, 0.502);
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
